@@ -18,3 +18,4 @@ HOST-SUFFIX,tlivesource.com,PT-Proxy
 HOST-SUFFIX,trtc.io,PT-Proxy
 IP-CIDR,43.152.0.0/16,PT-Proxy,no-resolve
 IP-CIDR,150.109.0.0/16,PT-Proxy,no-resolve
+HOST-SUFFIX,bangumi.tv/,PT-Proxy
