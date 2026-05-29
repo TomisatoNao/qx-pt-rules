@@ -1,0 +1,20 @@
+# NAME: PT-Proxy
+# DESC: PT sites routed through proxy
+# SOURCE: ptpro.yaml
+# TOTAL: 15
+
+HOST-SUFFIX,txtnovel.vip,PT-Proxy
+HOST-SUFFIX,u2.dmhy.org,PT-Proxy
+HOST-SUFFIX,avistaz.to,PT-Proxy
+HOST-SUFFIX,exoticaz.to,PT-Proxy
+HOST-SUFFIX,cinemaz.to,PT-Proxy
+HOST-SUFFIX,empornium.is,PT-Proxy
+HOST-SUFFIX,empornium.sx,PT-Proxy
+HOST-SUFFIX,spring-plus.net,PT-Proxy
+HOST-SUFFIX,star-space.net,PT-Proxy
+HOST-SUFFIX,bgm.tv,PT-Proxy
+HOST-SUFFIX,tliveplay.com,PT-Proxy
+HOST-SUFFIX,tlivesource.com,PT-Proxy
+HOST-SUFFIX,trtc.io,PT-Proxy
+IP-CIDR,43.152.0.0/16,PT-Proxy,no-resolve
+IP-CIDR,150.109.0.0/16,PT-Proxy,no-resolve
