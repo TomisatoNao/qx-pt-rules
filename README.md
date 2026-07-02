@@ -19,7 +19,29 @@ https://raw.githubusercontent.com/TomisatoNao/qx-pt-rules/main/rules/PT-Proxy.li
 
 Replace `PROXY` with the real Quantumult X policy group name if yours is different.
 
+## Loon
+
+Import the combined rule file:
+
+```ini
+https://raw.githubusercontent.com/TomisatoNao/qx-pt-rules/main/rules/PT-Loon.list
+```
+
+Rules use Loon's built-in `DIRECT` policy and the `PROXY` policy group for proxy traffic. If your proxy group has a different name (e.g. `🚀 节点选择`, `Auto`), replace `PROXY` in the `.list` file before importing, or use Loon's rule-subscription rename feature.
+
 ## Convert
+
+### Quantumult X
+
+```bash
+python scripts/convert.py
+```
+
+### Loon
+
+```bash
+python scripts/convert_loon.py
+```
 
 Put the source YAML files in `source/`:
 
