@@ -130,15 +130,15 @@ def write_loon_list(
     )
 
 
-def to_loon_geo_rule(value: str, policy: str) -> str | None:
-    """Convert to Loon rule with inline policy; no-resolve for domain rules only."""
+def to_loon_geo_rule(value: str) -> str | None:
+    """Convert to Loon rule (no policy tag); no-resolve for domain rules only."""
     value = value.strip()
 
     if value.startswith("+."):
-        return f"DOMAIN-SUFFIX,{value[2:]},{policy},no-resolve"
+        return f"DOMAIN-SUFFIX,{value[2:]},no-resolve"
 
     if value.startswith("."):
-        return f"DOMAIN-SUFFIX,{value[1:]},{policy},no-resolve"
+        return f"DOMAIN-SUFFIX,{value[1:]},no-resolve"
 
     try:
         ipaddress.ip_network(value, strict=False)
@@ -146,24 +146,23 @@ def to_loon_geo_rule(value: str, policy: str) -> str | None:
         pass
     else:
         rule_type = "IP6-CIDR" if ":" in value else "IP-CIDR"
-        return f"{rule_type},{value},{policy}"
+        return f"{rule_type},{value}"
 
     if "/" in value:
         return None
 
-    return f"DOMAIN,{value},{policy},no-resolve"
+    return f"DOMAIN,{value},no-resolve"
 
 
 def write_loon_geo_list(
     source_name: str,
     output_name: str,
-    policy: str,
     desc: str,
 ) -> None:
     source_path = SOURCE / source_name
     output_path = RULES / output_name
     items = parse_payload(source_path)
-    rules = [r for item in items if (r := to_loon_geo_rule(item, policy)) is not None]
+    rules = [r for item in items if (r := to_loon_geo_rule(item)) is not None]
     rules = dedup_rules(rules)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -193,7 +192,6 @@ def main() -> None:
     write_loon_geo_list(
         "bybit-geo.yaml",
         "Bybit-Geo-Loon.list",
-        "💞 地域限制",
         "Bybit exchange & geo-restriction bypass",
     )
 

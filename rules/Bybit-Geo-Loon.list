@@ -2,28 +2,28 @@
 # DESC: Bybit exchange & geo-restriction bypass
 # TOTAL: 25
 
-DOMAIN,bybit-exchange.github.io,💞 地域限制,no-resolve
-DOMAIN,app-measurement.com,💞 地域限制,no-resolve
-DOMAIN-SUFFIX,ffbbbdc6d3c353211fe2ba39c9f744cd.com,💞 地域限制,no-resolve
-DOMAIN-SUFFIX,ffe390afd658c19dcbf707e0597b846d.de,💞 地域限制,no-resolve
-DOMAIN-SUFFIX,amazon.com,💞 地域限制,no-resolve
-DOMAIN-SUFFIX,amazonaws.com,💞 地域限制,no-resolve
-DOMAIN-SUFFIX,bybit.biz,💞 地域限制,no-resolve
-DOMAIN-SUFFIX,bybit.com,💞 地域限制,no-resolve
-DOMAIN-SUFFIX,bycsi.com,💞 地域限制,no-resolve
-DOMAIN-SUFFIX,bytick.com,💞 地域限制,no-resolve
-DOMAIN-SUFFIX,byapis.com,💞 地域限制,no-resolve
-DOMAIN-SUFFIX,bycbe.com,💞 地域限制,no-resolve
-DOMAIN-SUFFIX,bymj.io,💞 地域限制,no-resolve
-DOMAIN-SUFFIX,byabcde.com,💞 地域限制,no-resolve
-DOMAIN-SUFFIX,byapps.net,💞 地域限制,no-resolve
-DOMAIN-SUFFIX,byd3c3.com,💞 地域限制,no-resolve
-DOMAIN-SUFFIX,bybdc6.com,💞 地域限制,no-resolve
-DOMAIN-SUFFIX,appsflyer.com,💞 地域限制,no-resolve
-IP-CIDR,13.32.121.6/32,💞 地域限制
-IP-CIDR,43.133.238.145/32,💞 地域限制
-IP-CIDR,13.33.187.108/32,💞 地域限制
-IP-CIDR,150.109.230.182/32,💞 地域限制
-IP-CIDR,142.251.215.234/32,💞 地域限制
-IP-CIDR,43.133.241.84/32,💞 地域限制
-IP-CIDR,3.160.150.37/32,💞 地域限制
+DOMAIN,bybit-exchange.github.io,no-resolve
+DOMAIN,app-measurement.com,no-resolve
+DOMAIN-SUFFIX,ffbbbdc6d3c353211fe2ba39c9f744cd.com,no-resolve
+DOMAIN-SUFFIX,ffe390afd658c19dcbf707e0597b846d.de,no-resolve
+DOMAIN-SUFFIX,amazon.com,no-resolve
+DOMAIN-SUFFIX,amazonaws.com,no-resolve
+DOMAIN-SUFFIX,bybit.biz,no-resolve
+DOMAIN-SUFFIX,bybit.com,no-resolve
+DOMAIN-SUFFIX,bycsi.com,no-resolve
+DOMAIN-SUFFIX,bytick.com,no-resolve
+DOMAIN-SUFFIX,byapis.com,no-resolve
+DOMAIN-SUFFIX,bycbe.com,no-resolve
+DOMAIN-SUFFIX,bymj.io,no-resolve
+DOMAIN-SUFFIX,byabcde.com,no-resolve
+DOMAIN-SUFFIX,byapps.net,no-resolve
+DOMAIN-SUFFIX,byd3c3.com,no-resolve
+DOMAIN-SUFFIX,bybdc6.com,no-resolve
+DOMAIN-SUFFIX,appsflyer.com,no-resolve
+IP-CIDR,13.32.121.6/32
+IP-CIDR,43.133.238.145/32
+IP-CIDR,13.33.187.108/32
+IP-CIDR,150.109.230.182/32
+IP-CIDR,142.251.215.234/32
+IP-CIDR,43.133.241.84/32
+IP-CIDR,3.160.150.37/32
