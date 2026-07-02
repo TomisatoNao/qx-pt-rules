@@ -21,13 +21,17 @@ Replace `PROXY` with the real Quantumult X policy group name if yours is differe
 
 ## Loon
 
-Import the combined rule file:
+导入两个订阅，分别选择对应策略即可：
 
 ```ini
-https://raw.githubusercontent.com/TomisatoNao/qx-pt-rules/main/rules/PT-Loon.list
+# 直连 — 订阅时策略选 DIRECT
+https://raw.githubusercontent.com/TomisatoNao/qx-pt-rules/main/rules/PT-Loon-Direct.list
+
+# 代理 — 订阅时策略选你的代理组（如 🚀 节点选择）
+https://raw.githubusercontent.com/TomisatoNao/qx-pt-rules/main/rules/PT-Loon-Proxy.list
 ```
 
-Rules use Loon's built-in `DIRECT` policy and the `PROXY` policy group for proxy traffic. If your proxy group has a different name (e.g. `🚀 节点选择`, `Auto`), replace `PROXY` in the `.list` file before importing, or use Loon's rule-subscription rename feature.
+规则本身不带策略，策略在 Loon 客户端订阅时手动指定。
 
 ## Convert
 
