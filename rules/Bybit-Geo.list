@@ -1,0 +1,30 @@
+# NAME: 💞 地域限制
+# DESC: Bybit exchange & geo-restriction bypass
+# SOURCE: bybit-geo.yaml
+# TOTAL: 25
+
+HOST,bybit-exchange.github.io,💞 地域限制
+HOST,app-measurement.com,💞 地域限制
+HOST-SUFFIX,ffbbbdc6d3c353211fe2ba39c9f744cd.com,💞 地域限制
+HOST-SUFFIX,ffe390afd658c19dcbf707e0597b846d.de,💞 地域限制
+HOST-SUFFIX,amazon.com,💞 地域限制
+HOST-SUFFIX,amazonaws.com,💞 地域限制
+HOST-SUFFIX,bybit.biz,💞 地域限制
+HOST-SUFFIX,bybit.com,💞 地域限制
+HOST-SUFFIX,bycsi.com,💞 地域限制
+HOST-SUFFIX,bytick.com,💞 地域限制
+HOST-SUFFIX,byapis.com,💞 地域限制
+HOST-SUFFIX,bycbe.com,💞 地域限制
+HOST-SUFFIX,bymj.io,💞 地域限制
+HOST-SUFFIX,byabcde.com,💞 地域限制
+HOST-SUFFIX,byapps.net,💞 地域限制
+HOST-SUFFIX,byd3c3.com,💞 地域限制
+HOST-SUFFIX,bybdc6.com,💞 地域限制
+HOST-SUFFIX,appsflyer.com,💞 地域限制
+IP-CIDR,13.32.121.6/32,💞 地域限制,no-resolve
+IP-CIDR,43.133.238.145/32,💞 地域限制,no-resolve
+IP-CIDR,13.33.187.108/32,💞 地域限制,no-resolve
+IP-CIDR,150.109.230.182/32,💞 地域限制,no-resolve
+IP-CIDR,142.251.215.234/32,💞 地域限制,no-resolve
+IP-CIDR,43.133.241.84/32,💞 地域限制,no-resolve
+IP-CIDR,3.160.150.37/32,💞 地域限制,no-resolve

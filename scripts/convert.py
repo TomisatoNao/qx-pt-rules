@@ -54,11 +54,48 @@ def to_qx_rule(value: str, policy: str) -> str:
     return f"HOST,{value},{policy}"
 
 
+def dedup_rules(rules: list[str]) -> list[str]:
+    """Remove rules covered by suffix containment.
+
+    - A HOST rule is removed if a HOST-SUFFIX rule already covers that hostname.
+    - A longer HOST-SUFFIX rule is removed if a shorter one already covers it.
+    """
+    # Collect all suffix values
+    suffix_values: set[str] = set()
+    for rule in rules:
+        rtype = rule.split(",")[0]
+        if rtype == "HOST-SUFFIX":
+            suffix_values.add(rule.split(",")[1])
+
+    result: list[str] = []
+    for rule in rules:
+        parts = rule.split(",")
+        rtype, value = parts[0], parts[1]
+
+        if rtype == "HOST":
+            covered = any(value == sv or value.endswith("." + sv) for sv in suffix_values)
+            if covered:
+                continue
+
+        if rtype == "HOST-SUFFIX":
+            covered = any(
+                value != sv and (value == sv or value.endswith("." + sv))
+                for sv in suffix_values
+            )
+            if covered:
+                continue
+
+        result.append(rule)
+
+    return result
+
+
 def write_list(source_name: str, output_name: str, policy: str, desc: str) -> None:
     source_path = SOURCE / source_name
     output_path = RULES / output_name
     items = parse_payload(source_path)
     rules = [to_qx_rule(item, policy) for item in items]
+    rules = dedup_rules(rules)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(
@@ -80,6 +117,7 @@ def write_list(source_name: str, output_name: str, policy: str, desc: str) -> No
 def main() -> None:
     write_list("ptmrs.yaml", "PT-Direct.list", "PT-Direct", "PT sites routed directly")
     write_list("ptpro.yaml", "PT-Proxy.list", "PT-Proxy", "PT sites routed through proxy")
+    write_list("bybit-geo.yaml", "Bybit-Geo.list", "💞 地域限制", "Bybit exchange & geo-restriction bypass")
 
 
 if __name__ == "__main__":

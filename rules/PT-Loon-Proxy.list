@@ -1,6 +1,6 @@
 # NAME: PT-Loon-Proxy.list
 # DESC: PT sites — subscribe with proxy policy
-# TOTAL: 15
+# TOTAL: 17
 
 DOMAIN-SUFFIX,txtnovel.vip
 DOMAIN-SUFFIX,u2.dmhy.org
@@ -12,9 +12,10 @@ DOMAIN-SUFFIX,empornium.sx
 DOMAIN-SUFFIX,spring-plus.net
 DOMAIN-SUFFIX,star-space.net
 DOMAIN-SUFFIX,bgm.tv
+DOMAIN-SUFFIX,bangumi.tv
+DOMAIN-SUFFIX,showroom-txlive.com
 DOMAIN-SUFFIX,tliveplay.com
 DOMAIN-SUFFIX,tlivesource.com
 DOMAIN-SUFFIX,trtc.io
-DOMAIN-SUFFIX,showroom-txlive.com
 IP-CIDR,43.152.0.0/16,no-resolve
 IP-CIDR,150.109.0.0/16,no-resolve
