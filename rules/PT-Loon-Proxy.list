@@ -15,5 +15,6 @@ DOMAIN-SUFFIX,bgm.tv
 DOMAIN-SUFFIX,tliveplay.com
 DOMAIN-SUFFIX,tlivesource.com
 DOMAIN-SUFFIX,trtc.io
+DOMAIN-SUFFIX,showroom-txlive.com
 IP-CIDR,43.152.0.0/16,no-resolve
 IP-CIDR,150.109.0.0/16,no-resolve
