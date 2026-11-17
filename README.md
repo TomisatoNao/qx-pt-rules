@@ -59,3 +59,13 @@ Then run:
 ```bash
 python scripts/convert.py
 ```
+
+## Loon X 广告过滤（实验版）
+
+新增可选插件，不改变现有 PT 规则。它仅过滤可解密 GraphQL 响应中明确标记的推广条目，**尚未在 X 官方 App 上实测，不保证有效**。
+
+- [插件下载地址](https://raw.githubusercontent.com/TomisatoNao/qx-pt-rules/main/plugins/Loon/X-AdFilter.plugin)：在 Loon 插件管理中通过 URL 添加，JS 自动下载。
+- [安装、限制和排障说明](docs/Loon-X-AdFilter.md)
+- [脚本](scripts/x-ad-filter.js) / [模拟响应测试](tests/x-ad-filter.test.cjs)
+
+如启用后 X 连接异常，请停用该插件。
