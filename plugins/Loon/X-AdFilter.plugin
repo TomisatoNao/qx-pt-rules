@@ -1,12 +1,18 @@
-#!name = X信息流广告过滤（实验版）
-#!desc = 只过滤可解密GraphQL JSON中明确标记的推广条目。未经官方App实测，不保证有效；加载异常请停用。脚本由本仓库下载，不需要另行导入JS。
+#!name = X信息流广告过滤（暂停运行）
+#!desc = 用户实测出现首页加载失败且广告残留，当前版本已移除活动脚本与MitM域名。请先停用插件；等待实际日志排查，勿继续扩大域名拦截。
 #!author = Custom
 #!loon_version = 3.5.1(983)
 #!date = 2026-11-17
-#!tag = 去广告,实验
+#!tag = 实验,暂停
+
+# This is an inactive replacement for the experimental plugin.
+# Existing installations must disable the plugin or refresh to this version.
+# No active scripts, rules, or MitM hostnames are installed.
 
 [Script]
-http-response ^https:\/\/(?:api\.)?(?:twitter\.com|x\.com)\/(?:i\/api\/)?graphql\/[^/?]+\/(?:HomeTimeline|HomeLatestTimeline|SearchTimeline|TweetDetail|UserTweets|UserTweetsAndReplies|ListLatestTweetsTimeline)(?:[/?]|$) script-path=https://raw.githubusercontent.com/TomisatoNao/qx-pt-rules/main/scripts/x-ad-filter.js, requires-body=true, timeout=5, tag=X-AdFilter
+# Suspended pending real app diagnostics.
+# Previous experimental entry (comment only):
+# http-response ^https:\/\/(?:api\.)?(?:twitter\.com|x\.com)\/(?:i\/api\/)?graphql\/[^/?]+\/(?:HomeTimeline|HomeLatestTimeline|SearchTimeline|TweetDetail|UserTweets|UserTweetsAndReplies|ListLatestTweetsTimeline)(?:[/?]|$) script-path=https://raw.githubusercontent.com/TomisatoNao/qx-pt-rules/main/scripts/x-ad-filter.js, requires-body=true, timeout=5, tag=X-AdFilter
 
 [Mitm]
-hostname = api.twitter.com, api.x.com, twitter.com, x.com
+# Intentionally empty: do not decrypt X hosts through this plugin.
