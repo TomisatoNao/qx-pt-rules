@@ -1,0 +1,12 @@
+#!name = X信息流广告过滤（实验版）
+#!desc = 只过滤可解密GraphQL JSON中明确标记的推广条目。未经官方App实测，不保证有效；加载异常请停用。脚本由本仓库下载，不需要另行导入JS。
+#!author = Custom
+#!loon_version = 3.5.1(983)
+#!date = 2026-11-17
+#!tag = 去广告,实验
+
+[Script]
+http-response ^https:\/\/(?:api\.)?(?:twitter\.com|x\.com)\/(?:i\/api\/)?graphql\/[^/?]+\/(?:HomeTimeline|HomeLatestTimeline|SearchTimeline|TweetDetail|UserTweets|UserTweetsAndReplies|ListLatestTweetsTimeline)(?:[/?]|$) script-path=https://raw.githubusercontent.com/TomisatoNao/qx-pt-rules/main/scripts/x-ad-filter.js, requires-body=true, timeout=5, tag=X-AdFilter
+
+[Mitm]
+hostname = api.twitter.com, api.x.com, twitter.com, x.com
